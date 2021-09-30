@@ -73,7 +73,7 @@ class KeyboardAvoidingView extends React.Component<Props, State> {
 
   _relativeKeyboardHeight(keyboardFrame): number {
     const frame = this._frame;
-    if (!frame || !keyboardFrame) {
+    if (!frame || !keyboardFrame || keyboardFrame.screenY === 0) {
       return 0;
     }
 
